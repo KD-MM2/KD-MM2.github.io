@@ -17,15 +17,15 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>youtube.01.youtube</string>
+				<string>com.google.ios.youtube</string>
 				<key>bundle-version</key>
-				<string>15.28.2</string>
+				<string>15.26.4</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>subtitle</key>
 				<string>41A472</string>
 				<key>title</key>
-				<string>Youtube 15.28.2 | kd.kaotd@gmail.com</string>
+				<string>Youtube 15.26.4|kd.kaotd@gmail.com</string>
 			</dict>
 		</dict>
 	</array>
