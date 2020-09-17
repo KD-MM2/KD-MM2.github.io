@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://raw.githubusercontent.com/KD-MM2/KD-MM2.github.io/master/qx/youtube-15.25.2-kd.kaotd.ipa</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>youtube.01.youtube</string>
+				<key>bundle-version</key>
+				<string>15.28.2</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>subtitle</key>
+				<string>41A472</string>
+				<key>title</key>
+				<string>Youtube 15.28.2 | kd.kaotd@gmail.com</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
