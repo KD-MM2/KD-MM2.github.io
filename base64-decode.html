@@ -4240,28 +4240,6 @@
                 bottom: 0;
               }
             </style>
-            <script type="text/javascript">
-              addActiveInSideMenu();
-
-              function addActiveInSideMenu() {
-                if (document.getElementById('sidebar') === null || document.getElementById('sidebar') === undefined) {
-                  return;
-                }
-                var sideBarLinks = document.getElementById('sidebar').getElementsByTagName('a');
-                for (var i = 0; i < sideBarLinks.length; i++) {
-                  var elem = sideBarLinks[i];
-                  //console.log("window.location.href:->"+window.location.href +" links:->"+elem.href);
-                  if (window.location.href.includes(elem.href)) {
-                    elem.classList.add("is-active");
-                    //elem.scrollIntoView();
-                    document.getElementById('sidebar').scrollTop = elem.offsetTop - 50;
-                    //window.scrollTo({ top: 0, behavior: 'smooth' });
-                    //console.log("Link Activated");
-                    break;
-                  }
-                }
-              }
-            </script>
           </div>
           <div class="column is-6">
             <div class="columns mb-0">
