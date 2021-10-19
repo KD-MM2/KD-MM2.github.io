@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"> 
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Base64 Decode online tool to decode base64 String, URL, File.</title>
+    <title>Best Base64 Encode tool to encode base64 String.</title>
     <meta name="author" content="Jimmy">
-    <meta name="description" content="Online Base64 Decode tool is to decode base64 your String using Base64 Decoder. Convert String, File and load URL.">
-    <meta name="keywords" content="base64 decode,decode base64,base64 decode online, online base64 decode, base64_decode">
-    <meta property="og:title" content="Best Base64 Decode online tool to decode base64 String, URL, File.">
-    <meta property="og:description" content="Online Base64 Decode tool is to decode base64 your String using Base64 Decoder. Convert String, File and load URL.">
-    <meta property="og:image" content="img/cb/base64-decode.png">
-    <meta property="og:url" content="base64-decode.html">
+    <meta name="description" content="Base64 Encode tool is to encode your String using Base64 Encoder Online : This utility will Encode string to Base64.">
+    <meta name="keywords" content="base64 encode, base64 encoding, base64 encode online, base64 encoding, base64 encoder, base 64 encode">
+    <meta property="og:title" content="Best Base64 Encode tool to encode base64 String.">
+    <meta property="og:description" content="Base64 Encode tool is to encode your String using Base64 Encoder Online : This utility will Encode string to Base64.">
+    <meta property="og:image" content="img/cb/base64-encode.png">
+    <meta property="og:url" content="base64-encode.html">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="base64-decode.html">
+    
+    <link rel="canonical" href="base64-encode.html">
+    <link href="img/cb.png" rel="icon">
     <style>
       /* starts Material Icons CSS */
       /* in case of update Compare with https://fonts.googleapis.com/icon?family=Material+Icons */
@@ -25,6 +27,7 @@
         src: url(https://fonts.gstatic.com/s/materialicons/v98/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
         font-display: block;
       }
+
       .material-icons {
         font-family: 'Material Icons';
         font-weight: normal;
@@ -40,31 +43,48 @@
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
       }
+
       /* Ends Material Icons CSS */
     </style>
     <link rel="stylesheet" href="tools-css/b-string-tools.min.css">
-    
-    <script defer="" src="tools-js/b-string-tools.min.js"></script>
   </head>
   <body>
-    <input type="hidden" id="viewName" value="base64-decode">
-    <input id="sampleurl" type="hidden" value="R2VpY28=">
-    <input id="fTitle" type="hidden" value="Best Base64 Decode online tool to decode base64 String, URL, File.">
+    <input type="hidden" id="viewName" value="base64-encode">
+    <input id="sampleurl" type="hidden" value="KaoTD">
+    <input id="fTitle" type="hidden" value="Best Base64 Encode tool to encode base64 String.">
     <div id="app">
+      
+      <hr class="my-0">
       <progress id="ajaxProgressBar" class="progress is-tiny is-dark" max="100">50%</progress>
       <div class="container is-fluid">
         <br class="is-hidden-touch">
         <div class="columns is-desktop">
-          <div class="column is-3 pr-5 is-hidden-touch"></div>
+          <div class="column is-3 pr-5 is-hidden-touch">
+            
+            <style type="text/css">
+              .menu {
+                position: sticky;
+                display: inline-block;
+                vertical-align: top;
+                max-height: 70vh;
+                overflow-y: auto;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+              }
+            </style>
+            
+          </div>
           <div class="column is-6">
             <div class="columns mb-0">
               <div class="column">
-                <h1 id="mainTitle" class="title is-size-2">Base64 Decode</h1>
+                <h1 id="mainTitle" class="title is-size-2">Base64 Encode</h1>
               </div>
               <div class="column" style="display:none;">
                 <button id="topMessage" type="button" class="button is-info is-fullwidth">Message</button>
               </div>
               <div id="new-ss-div" class="column has-text-right is-hidden-mobile">
+                
                 <button id="new" type="button" class="button is-info" onclick="loadNewView()">New</button>
                 <button id="savenshare" type="button" class="button is-dark" onclick="openSaveModal()">Save &amp; Share</button>
               </div>
@@ -82,7 +102,7 @@
             <hr class="mt-0 mb-2 is-hidden-touch">
             <div class="columns mb-0">
               <div class="column is-6 is-hidden-touch pb-0">
-                <h3>Enter the text to Base64 Decode</h3>
+                <h3>Enter the text to Base64 Encode</h3>
               </div>
               <div class="column is-6 pb-0">
                 <div class="textareatoolbar is-pulled-right">
@@ -102,29 +122,29 @@
                     <i class="material-icons">content_copy</i>
                   </a>
                 </div>
-                <a class="icon" style="margin-right:20px;float:right;color: #363636;" title="Sample Data" onclick="getBase64DecodeSample();">
+                <a class="icon" style="margin-right:20px;float:right;color: #363636;" title="Sample Data" onclick="getBase64EncodeSample();">
                   <i>Sample</i>
                 </a>
               </div>
             </div>
             <div class="field">
               <div class="control">
-                <textarea id="inputTextArea" class="textarea is-medium is-primary" rows="6" placeholder="Enter Base64 Encoded data" autofocus=""></textarea>
+                <textarea id="inputTextArea" class="textarea is-medium is-primary" rows="6" placeholder="Enter Plain data" autofocus=""></textarea>
               </div>
             </div>
             <div class="columns is-hidden-touch">
               <div class="column is-12 py-0">
-                <div id="inputFooterStatus" class="is-pulled-right">Size : <strong>8</strong> B, 8 Characters </div>
+                <div id="inputFooterStatus" class="is-pulled-right">Size : 0 , 0 Characters</div>
               </div>
             </div>
             <div class="buttons is-centered my-0">
               <label class="checkbox mb-2 mr-2">
                 <input type="checkbox" id="isAuto" checked=""> Auto </label>
-              <button id="defaultAction" onclick="base64Decode();" class="button is-medium is-primary mr-4">
+              <button id="defaultAction" onclick="base64Encode();" class="button is-medium is-primary mr-4">
                 <span class="icon">
                   <i class="material-icons">cached</i>
                 </span>
-                <span>Base64 Decode</span>
+                <span>Base64 Encode</span>
               </button>
               <button class="button is-medium mr-4">
                 <input id="fileInput" class="file-input" type="file" onchange="handleFiles(this.files)">
@@ -142,7 +162,7 @@
             </div>
             <div class="columns mb-0">
               <div class="column is-6 is-hidden-touch pb-0">
-                <h3>The Base64 Decode:</h3>
+                <h3>The Base64 Encoded:</h3>
               </div>
               <div class="column is-6 pb-0">
                 <div class="textareatoolbar is-pulled-right">
@@ -154,12 +174,12 @@
             </div>
             <div class="field">
               <div class="control">
-                <textarea id="outputTextArea" class="textarea is-medium is-info" rows="6" placeholder="Plain text from Base64"></textarea>
+                <textarea id="outputTextArea" class="textarea is-medium is-info" rows="6" placeholder="Base64 from Plain text"></textarea>
               </div>
             </div>
             <div class="columns mb-0 is-hidden-touch">
               <div class="column is-12 py-0">
-                <div id="outputFooterStatus" class="is-pulled-right">Size : <strong>5</strong> B, 5 Characters </div>
+                <div id="outputFooterStatus" class="is-pulled-right">Size : 0 , 0 Characters</div>
               </div>
             </div>
             <div class="buttons is-centered mb-0">
@@ -177,8 +197,10 @@
               </button>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
-  </body>
-</html>
+    <script src="tools-js/b-string-tools.min.js"></script>
+</body>
+</html> 
