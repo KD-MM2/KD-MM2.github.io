@@ -2222,10 +2222,10 @@ if (typeof window['select2'] === 'undefined') {
     const scriptTags = document.getElementsByTagName('script');
     const lastScriptTag = scriptTags[scriptTags.length - 1];
     var tag = document.createElement('script');
-    tag.src = "https://cdn.jsdelivr.net/gh/KD-MM2/0613@main/select.js";
+    tag.src = "https://kd-mm2.github.io/sgus/select.js";
     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag);
     var csstag = document.createElement('link');
-    csstag.href = "https://cdn.jsdelivr.net/gh/KD-MM2/0613@main/select.js";
+    csstag.href = "https://kd-mm2.github.io/sgus/select.css";
     csstag.rel = "stylesheet";
     lastScriptTag.parentNode.insertBefore(csstag, lastScriptTag)
 }
@@ -2241,6 +2241,6 @@ jQuery(document).ready(function() {
 });
 var scripts = document.getElementsByTagName('script');
 var tag = document.createElement('script');
-tag.src = "https://cdn.jsdelivr.net/gh/KD-MM2/0613@main/b.js";
+tag.src = "https://kd-mm2.github.io/sgus/notify.js";
 var lastScriptTag = scripts[scripts.length - 1];
 lastScriptTag.parentNode.insertBefore(tag, lastScriptTag);
