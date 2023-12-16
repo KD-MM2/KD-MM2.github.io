@@ -1,0 +1,1659 @@
+/**
+ * Author: S a l e s G e n.io
+ */
+.salesgen-bmsm-items li,
+.salesgen-upsell-item .box-image a,
+.salesgen-upsell-item-list-heading-wrp,
+.salesgen-upsell-item-thumb-small,
+.sgcol,
+.sgub-product-image-main {
+    position: relative
+}
+
+.sg-upsell-multi_cols .salesgen-upsell-popup-items,
+.sgrow {
+    width: 100%;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap
+}
+
+.sgcol {
+    margin: 0;
+    padding: 0 15px 30px;
+    width: 100%
+}
+
+.sgmb-0 {
+    margin-bottom: 0 !important
+}
+
+.sg-divider {
+    height: 3px;
+    display: block;
+    background-color: rgba(0, 0, 0, .1);
+    margin: 1em 0;
+    width: 100%;
+    max-width: 30px
+}
+
+@media screen and (min-width:850px) {
+    .sg-large-6 {
+        max-width: 50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%
+    }
+}
+
+.salesgen-bmsm-heading {
+    vertical-align: middle;
+    width: 100%;
+    border: 2px dashed #03a9f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    margin-top: 15px
+}
+
+.salesgen-bmsm-heading .sgbox1,
+.salesgen-bmsm-heading .sgbox2 {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.sgboxes {
+    display: table-row;
+    padding-bottom: 20px
+}
+
+.salesgen-bmsm-heading .sgbox1 {
+    width: 50px;
+    max-width: 50px
+}
+
+.salesgen-bmsm-heading .sgbox1 svg {
+    width: 50px;
+    max-width: 50px;
+    height: 50px
+}
+
+.salesgen-bmsm-heading .sgbox2,
+.sgbmsm-price-checkbox-wrp {
+    padding-left: 10px
+}
+
+.sgbmsm-title {
+    color: red;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    font-size: 17px
+}
+
+.salesgen-bmsm-item-text,
+.sgbmsm-text {
+    color: #bcbcbc;
+    line-height: 18px;
+    text-align: left
+}
+
+.sgbmsm-text {
+    font-size: 13px
+}
+
+.salesgen-bmsm-items {
+    margin: 0;
+    padding: 0
+}
+
+.salesgen-bmsm-items li {
+    z-index: 15;
+    transition: .15s ease-in-out;
+    width: 100%;
+    height: 54px;
+    padding: 0 16px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0 !important;
+    list-style: none
+}
+
+.salesgen-bmsm-item-text {
+    font-size: 14px
+}
+
+.salesgen-bmsm-item-label {
+    margin-right: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    background: #446084;
+    color: #fff;
+    padding: 2px 5px
+}
+
+.salesgen-bmsm-item-title {
+    color: red;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left
+}
+
+.cart_totals .fee,
+.woocommerce-checkout-review-order-table .fee {
+    background-color: #c5e1a5;
+    border-radius: 2px
+}
+
+.cart_totals .fee td,
+.cart_totals .fee th,
+.woocommerce-checkout-review-order-table .fee td,
+.woocommerce-checkout-review-order-table .fee th {
+    padding: 10px;
+    color: #212121;
+    font-weight: 500
+}
+
+.salesgen-discount-notices {
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    color: #1d1d1d;
+    font-weight: 300;
+    font-size: 18px;
+    background: #c5e1a5;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+body .salesgen-discount-notices strong,
+body .salesgen-discount-notices strong .woocommerce-Price-amount.amount {
+    color: #2196f3;
+    font-weight: 700
+}
+
+.salesgen-discount-notices.salesgen-closest {
+    background: #ffe082
+}
+
+.salesgen-discount-notices.salesgen-closest-o {
+    background: #f5f5f5;
+    border: 1px dashed #a5a5a5
+}
+
+.sg-upsell-multi_cols .salesgen-upsell-item-thumb-small img,
+body .salesgen-upsell-checkboxes {
+    padding: 0
+}
+
+body .salesgen-upsell-checkboxes,
+body .salesgen-upsell-checkboxes li,
+body .salesgen-upsell-items,
+body .salesgen-upsell-items li {
+    list-style: none;
+    margin-left: 0 !important;
+    margin-bottom: 10px
+}
+
+body .button.salesgen-add-bundle {
+    padding: 0 6px;
+    font-size: 100%;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+    border-radius: 3px
+}
+
+.sgbmsm-price-checkbox .woocommerce-Price-amount.amount {
+    font-size: 1.2em
+}
+
+.salesgen-upsell-item-info .sgbmsm-price-checkbox .woocommerce-Price-amount.amount,
+body .salesgen-upsell-bundle .woocommerce-Price-currencySymbol {
+    font-size: 1em
+}
+
+.salesgen-total .woocommerce-Price-amount.amount,
+.sgbmsm-price-checkbox ins .woocommerce-Price-amount.amount {
+    color: #f44336;
+    font-size: 1.2em
+}
+
+.sgbmsm-price-checkbox del .woocommerce-Price-amount.amount {
+    color: #a0a0a0
+}
+
+body .salesgen-upsell-items .col {
+    padding-bottom: 0;
+    position: relative
+}
+
+body .salesgen-upsell-checkboxes li label {
+    font-weight: 400
+}
+
+.salesgen-upsell-selected::after {
+    content: "+";
+    font-size: 26px;
+    color: #6d6d6d;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    text-align: center;
+    right: -20px;
+    font-weight: 800
+}
+
+.cart-discount.coupon-sgbmsm a,
+.cart-discount.coupon-sgbundle a,
+.salesgen-bmsm-items[data-style=style2][data-discount_type=items] .salesgen-bmsm-item-label,
+.salesgen-upsell-item-info .wcpa_price_summary,
+.salesgen-upsell-items .salesgen-upsell-selected:last-child::after,
+.salesgen-upsell-options .wcpa_type_paragraph,
+.salesgen-upsell-popup-items .wcpa_price_summary,
+.salesgen-upsell-selected.last::after,
+.sg-hide-options .sg-bundle-preview-wrp,
+.sgbmsm-price-checkbox-wrp .wcpa_price_summary {
+    display: none
+}
+
+.salesgen-upsell-item {
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px;
+    -webkit-transition: opacity .6s, visibility .6s;
+    transition: opacity .6s, visibility .6s
+}
+
+.salesgen-upsell-selected,
+.sgbmsm-product-options.sgbmsm-enable {
+    visibility: visible;
+    opacity: 1
+}
+
+.sg-checkboxes-wrapper {
+    margin-bottom: 0;
+    padding-bottom: 0 !important
+}
+
+li.salesgen-upsell-item-list {
+    font-size: .9em
+}
+
+li.salesgen-upsell-item-list a {
+    color: #1d2327;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px
+}
+
+li.salesgen-upsell-item-list a:hover:not(.button) {
+    text-decoration: underline;
+    color: #000
+}
+
+.salesgen-upsell-item-list-heading-wrp input[type=checkbox] {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    line-height: 24px;
+    position: absolute
+}
+
+.salesgen-saved {
+    background-color: #cddc3970;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    padding: 2px 0
+}
+
+.salesgen-saved-amount {
+    display: inline-block;
+    padding: 0 3px
+}
+
+.salesgen-upsell-bundle {
+    margin-top: 40px;
+    display: inline-block;
+    max-width: 740px
+}
+
+.sg-upsell-lightbox-content-inner .salesgen-upsell-bundle {
+    padding: 14px;
+    margin-top: 20px
+}
+
+.sgbmsm-product-options {
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background: #fff;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .15);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 250px;
+    z-index: 9999
+}
+
+a.sgbmsm-product-options-show {
+    font-size: .9em;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-weight: 700
+}
+
+body .last .sgbmsm-product-options {
+    right: 0
+}
+
+.salesgen-discount-notices strong {
+    text-transform: uppercase
+}
+
+body .button.salesgen-select-options {
+    padding: 0 16px;
+    font-size: .9em;
+    text-transform: capitalize;
+    width: initial;
+    line-height: 2em;
+    min-height: 2em;
+    border-radius: 3px;
+    margin: 0;
+    float: right;
+    background-color: #fff;
+    color: #1fa48d;
+    border: 1px solid #1fa48d;
+    display: none
+}
+
+body .button.salesgen-select-options:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1fa48d
+}
+
+.active-select-options .button.salesgen-select-options,
+.sg-hide-options span.sgbmsm-price-checkbox,
+.sg-modal-buttons a span {
+    display: block
+}
+
+.active-select-options .salesgen-upsell-options {
+    position: absolute;
+    left: -9999px;
+    min-width: 220px;
+    background-color: #fff;
+    z-index: 9999;
+    top: 40px;
+    padding: 14px
+}
+
+.active-select-options .salesgen-upsell-options.active {
+    box-shadow: 0 2px 4px rgb(15 34 58 / 30%);
+    left: auto;
+    right: 0
+}
+
+.sg-upsell-lightbox,
+.sg-upsell-quickview {
+    display: none;
+    position: fixed;
+    z-index: 999999999;
+    font-size: 14px;
+    color: #3a3a3a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.sg-upsell-lightbox .sg-upsell-lightbox-overlay,
+.sg-upsell-quickview .sg-upsell-quickview-overlay {
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, .95);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.sg-upsell-lightbox .sg-upsell-lightbox-body,
+.sg-upsell-quickview .sg-upsell-quickview-body {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    z-index: 2;
+    max-height: 100vh;
+    transform: translateX(-50%) translateY(-40px);
+    -ms-transform: translateX(-50%) translateY(-40px);
+    -o-transform: translateX(-50%) translateY(-40px);
+    -moz-transform: translateX(-50%) translateY(-40px);
+    -webkit-transform: translateX(-50%) translateY(-40px);
+    border-radius: 4px;
+    height: 100%
+}
+
+.sg-upsell-lightbox-content {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 540px;
+    height: calc(100vh - 40px);
+    box-sizing: border-box;
+    min-height: 400px;
+    position: relative
+}
+
+.sg-upsell-lightbox-close,
+.sg-upsell-quickview-close {
+    position: absolute;
+    top: 10px;
+    right: -8px;
+    z-index: 99999;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 26px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none !important;
+    text-align: center;
+    border-radius: 50%;
+    background: #292929;
+    line-height: 1;
+    border: 1px solid #fff;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .9)
+}
+
+.sg-upsell-lightbox-more,
+.sg-upsell-lightbox-more:focus {
+    position: absolute;
+    top: -60px;
+    right: 1%;
+    z-index: 9999999999;
+    width: 40px;
+    height: 40px;
+    max-height: 40px;
+    color: #696969;
+    font-size: 40px;
+    line-height: 40px;
+    display: block;
+    cursor: pointer;
+    margin-left: -20px;
+    outline: initial !important;
+    text-decoration: none
+}
+
+.sg-upsell-lightbox-more span {
+    max-height: 40px;
+    display: block
+}
+
+.sg-upsell-lightbox-close:hover,
+.sg-upsell-lightbox-more:hover,
+.sg-upsell-quickview-close:hover,
+.sg-upsell-quickview-more:hover {
+    color: #fff;
+    text-decoration: none
+}
+
+.sg-lightbox-active,
+.sg-quickview-active {
+    display: block !important
+}
+
+.sg-upsell-lightbox-content-inner,
+.sg-upsell-quickview-content-inner {
+    background: #fff;
+    border-radius: 3px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    height: 100%
+}
+
+.sg-upsell-lightbox-content-message {
+    border-radius: 0;
+    padding: 10px 14px;
+    color: #1d1d1d;
+    font-weight: 300;
+    background: #f1f1f1;
+    text-align: left;
+    width: 100%;
+    font-size: 22px;
+    display: block;
+    overflow: hidden
+}
+
+.sg-upsell-quickview-content {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 1024px;
+    height: calc(100vh - 40px);
+    box-sizing: border-box;
+    min-height: 400px;
+    position: relative
+}
+
+.sg-upsell-quickview .single_add_to_cart_button.button {
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    border-radius: 3px;
+    font-size: 1.1em;
+    letter-spacing: 2px
+}
+
+.salesgen-upsell-item .grid-tools a {
+    font-size: .75em
+}
+
+.salesgen-upsell-content-holder {
+    display: none;
+    visibility: hidden;
+    opacity: 0
+}
+
+.salesgen-upsell-bundle .button {
+    color: #f8f8f8;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .97em;
+    letter-spacing: .03em;
+    -ms-touch-action: none;
+    touch-action: none;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    border-radius: 0;
+    margin-top: 0;
+    margin-right: 1em;
+    text-shadow: none;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    transition: transform .3s, border .3s, background .3s, box-shadow .3s, opacity .3s, color .3s;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box
+}
+
+body .sgbmsm-price-checkbox-wrp .salesgen-upsell-bundle select {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 3px 32px 3px 8px;
+    height: 2em;
+    font-size: .97em;
+    border-radius: 0;
+    max-width: 250px;
+    vertical-align: middle;
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    transition: color .3s, border .3s, background .3s, opacity .3s;
+    display: inline-block;
+    margin: 0 8px 8px 0
+}
+
+.salesgen-upsell-bundle select.sgbmsm-product-options-input {
+    box-shadow: inset 0 -1.4em 1em 0 rgba(0, 0, 0, .02);
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E);
+    background-position: right .45em top 50%;
+    background-repeat: no-repeat;
+    padding-right: 1.4em;
+    background-size: auto 16px;
+    border-radius: 0;
+    display: block
+}
+
+.salesgen-upsell-bundle .row {
+    width: 100%;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    max-width: 1080px;
+    margin: 0 !important
+}
+
+.salesgen-upsell-bundle .row .row-small {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 0
+}
+
+.salesgen-upsell-bundle.sg-upsell-layout-2 .row-small>.col {
+    position: relative;
+    margin: 0;
+    padding: 0 0 30px;
+    width: 100%
+}
+
+.salesgen-upsell-bundle.sg-upsell-layout-2 .small-4 {
+    max-width: 33.33333%;
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%
+}
+
+.salesgen-upsell-bundle.sg-upsell-layout-2 .small-12 {
+    max-width: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%
+}
+
+.salesgen-bmsm-items[data-style=style2] {
+    background: #fff9c4;
+    border-radius: 5px;
+    padding: 7px 20px 9px;
+    margin-bottom: 10px
+}
+
+.salesgen-bmsm-items[data-style=style2] li {
+    background: 0 0;
+    border-bottom: 1px dashed #90a4ae;
+    height: auto;
+    border-radius: 0;
+    padding: 0 0 4px;
+    list-style: none;
+    margin: 0
+}
+
+.salesgen-bmsm-items[data-style=style2] li:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+.salesgen-bmsm-items[data-style=style2] .salesgen-bmsm-item-title {
+    color: #585858;
+    font-weight: 50
+}
+
+.salesgen-bmsm-item-label-none {
+    font-size: 110%;
+    font-weight: 800
+}
+
+.salesgen-bmsm-items[data-style=style2] span.amount {
+    white-space: nowrap;
+    color: #585858;
+    font-weight: 500
+}
+
+.salesgen-bmsm-items[data-style=style2] .salesgen-bmsm-item-text {
+    line-height: 24px
+}
+
+.salesgen-bmsm-items[data-discount_type=subtotal][data-style=style1] .salesgen-bmsm-item-label {
+    margin-left: 5px
+}
+
+.salesgen-bmsm-items[data-style=style2] .salesgen-bmsm-item-label,
+.salesgen-bmsm-items[data-style=style2][data-discount_type=items] .salesgen-bmsm-item-label2 {
+    background: 0 0;
+    color: #444;
+    margin: 0;
+    padding: 0 1px;
+    font-weight: 700
+}
+
+.sg-upsell-lightbox-content-footer {
+    -webkit-box-shadow: -6px 0 4px 0 rgba(0, 0, 0, .15);
+    box-shadow: -6px 0 4px 0 rgba(0, 0, 0, .15);
+    background: #fff;
+    padding: 10px 14px;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    height: 64px
+}
+
+.sg-modal-buttons {
+    display: inline-block;
+    height: 44px;
+    width: 100%;
+    text-align: right
+}
+
+.sg-modal-buttons a.sg-proceed-checkout,
+.sg-modal-buttons a.sg-view-cart-btn {
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden;
+    outline: 0;
+    color: #ecf0f1;
+    transition: background-color .3s;
+    font-weight: 700;
+    font-size: 1em;
+    background-color: #2196f3;
+    border: none;
+    text-align: center;
+    letter-spacing: .2px;
+    line-height: 42px;
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 3px;
+    text-decoration: none
+}
+
+.sg-modal-buttons a.sg-view-cart-btn {
+    background: #fff;
+    color: #2196f3;
+    border: none
+}
+
+.sg-modal-buttons a.sg-view-cart-btn span {
+    background: 0 0
+}
+
+.sg-modal-buttons a.sg-proceed-cart {
+    background: #343480
+}
+
+.sg-modal-buttons a.sg-proceed-checkout:focus,
+.sg-modal-buttons a.sg-proceed-checkout:hover {
+    outline: 0;
+    opacity: 1;
+    -webkit-box-shadow: inset 0 0 0 100px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, .15)
+}
+
+.sg-modal-buttons a.sg-view-cart-btn:focus,
+.sg-modal-buttons a.sg-view-cart-btn:hover {
+    outline: 0;
+    opacity: 1;
+    -webkit-box-shadow: inset 0 0 0 100px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, .05)
+}
+
+.sg-btn-cart-view {
+    position: relative;
+    line-height: 1;
+    float: left
+}
+
+.sg-upsell-cart-icon {
+    width: 30px;
+    position: relative;
+    display: inline-block
+}
+
+.sg-upsell-popup-total-price {
+    line-height: 40px;
+    padding: 0 10px
+}
+
+.sg-upsell-cart-icon svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle
+}
+
+body .sg-btn-cart-view span {
+    display: inline-block
+}
+
+body .sg-upsell-count-badges {
+    position: absolute;
+    background: #008eff;
+    line-height: 1;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0;
+    color: #fff;
+    font-size: 11px;
+    top: 0;
+    right: -7px
+}
+
+body .sg-btn-cart-view .woocommerce-Price-amount,
+body .sg-cart-view-wrp .woocommerce-Price-amount {
+    padding: 0;
+    color: #d26e4b;
+    font-weight: 800;
+    font-size: 18px
+}
+
+.sg-popup-product-thumb {
+    max-width: 60px;
+    margin: 0 14px 0 0;
+    height: 70px;
+    float: left
+}
+
+.sg-popup-product-thumb img {
+    border-radius: 2px;
+    object-fit: cover;
+    height: 70px;
+    width: 100%;
+    object-position: top
+}
+
+.sg-upsell-lightbox-content-message h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #191919;
+    line-height: 18px;
+    margin: 0 0 5px;
+    clear: none;
+    font-weight: 700;
+    position: relative;
+    padding-left: 24px
+}
+
+.sg-upsell-lightbox-content-message h3 svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    line-height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.sg-upsell-lightbox-content-message span {
+    color: #505050;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block
+}
+
+.sg-upsell-lightbox-content-items {
+    padding: 14px;
+    background: #fff;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 180px)
+}
+
+.sg-upsell-lightbox-heading-frequently {
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    font-weight: 600
+}
+
+ul.salesgen-upsell-popup-items {
+    list-style: none;
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    margin: 0;
+    padding: 0
+}
+
+.salesgen-upsell-popup-items li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.salesgen-upsell-popup-items li a {
+    font-weight: 400;
+    line-height: 1.4em;
+    color: #033c05
+}
+
+.salesgen-upsell-popup-items .salesgen-upsell-item-info {
+    flex: 6;
+    padding: 10px 10px 0
+}
+
+.salesgen-upsell-item-info select {
+    width: 100%;
+    min-height: 30px;
+    border-color: #c5c5c5;
+    max-height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    font-size: 100%;
+    margin-bottom: 10px;
+    border-width: 1px
+}
+
+.salesgen-upsell-item-thumb-small {
+    flex: 4;
+    text-align: left
+}
+
+.salesgen-upsell-item-thumb-small img {
+    max-width: 100%;
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+    padding: 8px
+}
+
+body .woocommerce .salesgen-upsell-item-info .button.alt,
+body .woocommerce .salesgen-upsell-item-info button.alt {
+    width: 100%;
+    min-height: 40px;
+    line-height: 40px;
+    background-color: #40b705;
+    word-spacing: normal;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 0;
+    border: none
+}
+
+.salesgen-upsell-item-info .button.alt:hover,
+.salesgen-upsell-item-info button.alt:hover,
+span.salesgen-bmsm-items-add:hover {
+    outline: 0;
+    opacity: 1;
+    color: #fff;
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, .2)
+}
+
+.sg-popup-product-cart-info {
+    float: left;
+    width: calc(100% - 80px)
+}
+
+li.salesgen-upsell-item-list {
+    display: flex;
+    flex-wrap: wrap
+}
+
+span.sgbmsm-price-checkbox {
+    padding: 0 6px;
+    display: block;
+    width: 100%
+}
+
+.salesgen-upsell-item-list-heading-wrp {
+    flex: 70;
+    display: flex;
+    flex-flow: wrap
+}
+
+.sgbmsm-price-checkbox-wrp {
+    flex: 30;
+    position: relative
+}
+
+.sgbmsm-price-checkbox-wrp input[type=text],
+.sgbmsm-price-checkbox-wrp select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 .75em 0 .5em
+}
+
+.sg-bundle-thumbnail {
+    flex: 20
+}
+
+.sg-hide-options .salesgen-upsell-item-list-heading-wrp {
+    flex: 80;
+    padding: 10px 20px
+}
+
+.sg-hide-options .salesgen-upsell-item-list-heading-wrp a {
+    font-size: 1.15em;
+    max-height: inherit
+}
+
+.sg-hide-options .sg-bundle-thumbnail {
+    max-height: inherit
+}
+
+.salesgen-upsell-checkboxes li:first-child .salesgen-upsell-item-checkbox {
+    pointer-events: none
+}
+
+.salesgen-upsell-item-info .wcpa_form_item,
+.salesgen-upsell-wrapper .wcpa_form_item {
+    margin: 5px 0 0
+}
+
+.salesgen-upsell-item-info .wcpa_form_outer .wcpa_form_item input[type=text],
+.salesgen-upsell-item-info .wcpa_form_outer .wcpa_form_item select,
+.salesgen-upsell-wrapper .wcpa_form_item input[type=text],
+.salesgen-upsell-wrapper .wcpa_form_item select {
+    margin-bottom: 0;
+    border: 1px solid #ddd
+}
+
+.salesgen-upsell-item-info .wcpa_form_outer label,
+.salesgen-upsell-wrapper .wcpa_form_outer label {
+    font-size: 100%
+}
+
+.salesgen-upsell-item-info .wcpa_form_outer,
+.salesgen-upsell-wrapper .wcpa_form_outer {
+    margin-bottom: 10px;
+    margin-top: 0
+}
+
+.salesgen-upsell-popup-items .wcpa_form_outer .wcpa_row:last-child {
+    margin-bottom: 10px
+}
+
+.cart-container>.woocommerce-info.message-wrapper .salesgen-discount-notices {
+    display: none !important
+}
+
+.sg-is-invalid {
+    background: #fff9c4 !important;
+    border-color: red
+}
+
+span.salesgen-bmsm-items-add {
+    border: none;
+    padding: 7px 16px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #40b705;
+    word-spacing: normal;
+    align-items: flex-start;
+    color: #fff;
+    font-weight: 700
+}
+
+.sg-upsell-lightbox-content .salesgen-discount-notices {
+    font-size: 16px
+}
+
+.salesgen-total-wrp {
+    text-align: center
+}
+
+.salesgen-upsell-cart-items .salesgen-upsell-item-info a {
+    font-size: .9em;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.salesgen-upsell-cart-items li {
+    list-style: none
+}
+
+.salesgen-upsell-cart-items li img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+    height: 300px
+}
+
+.woocommerce-cart .sg-upsell-cart-content-items {
+    width: 100%;
+    display: inline-block
+}
+
+.sg-thankyou .sg-upsell-lightbox-content {
+    width: 1024px
+}
+
+.sg-thankyou .sg-upsell-cart-content-items {
+    background: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 20px 20px 10px;
+    color: rgba(0, 0, 0, .5)
+}
+
+.sg-thankyou .salesgen-upsell-cart-items li img {
+    max-height: 220px;
+    height: 220px
+}
+
+.sg-thankyou .sg-upsell-lightbox-content-heading {
+    background: #0b5e8b;
+    width: 100%;
+    display: inline-block;
+    padding: 20px 20px 10px;
+    color: #fff;
+    text-align: center
+}
+
+.sg-upsell-lightbox-content-heading h2 {
+    line-height: 1.5em;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 700
+}
+
+.sg-upsell-lightbox-content-heading p {
+    line-height: 1.5em;
+    font-size: 1.3em;
+    color: rgba(255, 255, 255, .7)
+}
+
+.sg-upsell-cart-coupon {
+    font-size: 1.2em;
+    background: #f5f5f5;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    width: 100%
+}
+
+.sg-cart-coupon-copy,
+input.sg-cart-coupon-code[type=text] {
+    display: inline-block;
+    text-transform: uppercase;
+    background: #fff
+}
+
+.sg-cart-coupon-spliter {
+    padding: 15px 20px 20px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 2px;
+    text-align: center
+}
+
+input.sg-cart-coupon-code[type=text] {
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    border: 2px dashed #00bcd4;
+    padding: 0 16px;
+    color: #1a1a1a;
+    font-weight: 700;
+    width: 200px !important;
+    margin-bottom: 5px
+}
+
+.salesgen-upsell-cart-items .salesgen-upsell-popup-item-list.col,
+.sg-upsell-multi_cols .salesgen-upsell-popup-items li {
+    padding: 0 9.8px 19.6px;
+    list-style: none;
+    position: relative;
+    margin: 0
+}
+
+.sg-cart-coupon-copy {
+    margin-left: 10px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    line-height: 34px;
+    height: 34px;
+    font-size: .8em;
+    color: #545454;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 5px 0 #8f8f8f;
+    -moz-box-shadow: 1px 1px 5px 0 #8f8f8f;
+    box-shadow: 1px 1px 5px 0 #8f8f8f
+}
+
+.sg-cart-coupon-spliter p {
+    margin-bottom: 1em;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    color: #9c27b0
+}
+
+.sg-upsell-lightbox-content-heading {
+    display: block;
+    width: 100%
+}
+
+.salesgen-upsell-cart-items {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap
+}
+
+.salesgen-upsell-cart-items .salesgen-upsell-popup-item-list.col {
+    max-width: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%
+}
+
+.salesgen-upsell-bundle .large-6,
+.sg-upsell-items-layout-two_cols .salesgen-upsell-popup-items li {
+    max-width: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%
+}
+
+.sg-upsell-items-layout-three_cols .salesgen-upsell-popup-items li {
+    max-width: 33.3333%;
+    -ms-flex-preferred-size: 33.3333%;
+    flex-basis: 33.3333%
+}
+
+.sg-upsell-items-layout-four_cols .salesgen-upsell-popup-items li {
+    max-width: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%
+}
+
+.sg-upsell-multi_cols .salesgen-upsell-popup-items .salesgen-upsell-item-info,
+.sg-upsell-multi_cols .salesgen-upsell-popup-items .salesgen-upsell-item-thumb-small {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0
+}
+
+.sg-upsell-multi_cols .salesgen-upsell-popup-items p.name.product-title.woocommerce-loop-product__title {
+    height: 5.1em;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline
+}
+
+body.sg-lightbox-forcus .mfp-ready {
+    visibility: hidden !important;
+    display: none !important
+}
+
+.sgub-product-image-back,
+.sgub-product-image-front {
+    -webkit-transition: opacity .6s, -webkit-filter .6s, -webkit-transform .6s, -webkit-box-shadow .3s;
+    transition: filter .6s, opacity .6s, transform .6s, box-shadow .3s, -webkit-filter .6s, -webkit-transform .6s, -webkit-box-shadow .3s;
+    -o-transition: filter .6s, opacity .6s, transform .6s, box-shadow .3s;
+    opacity: 0;
+    max-width: 100%;
+    box-sizing: border-box
+}
+
+.sgub-product-image-front {
+    max-width: 100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    box-sizing: border-box;
+    opacity: 1;
+    -webkit-transform: scale(1) translateZ(0) translateY(0) !important;
+    transform: scale(1) translateZ(0) translateY(0) !important;
+    pointer-events: inherit
+}
+
+.salesgen-upsell-bundle.sg-upsell-layout-1 .salesgen-total-wrp {
+    font-size: 88%
+}
+
+.salesgen-upsell-bundle.sg-upsell-layout-1 .button {
+    line-height: 2em;
+    min-height: 26px
+}
+
+.salesgen-upsell-related-items .salesgen-upsell-item-info .sg_single_add_to_cart_button.button {
+    width: 100%
+}
+
+@media only screen and (min-width:999px) {
+    .active-select-options .button.salesgen-select-options {
+        display: block;
+        position: absolute;
+        min-width: 120px;
+        padding: 0 10px;
+        right: 0
+    }
+
+    li.salesgen-upsell-item-list a {
+        color: #1d2327;
+        font-weight: 500;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 24px;
+        display: inline-block;
+        white-space: nowrap;
+        max-width: 280px
+    }
+}
+
+@media only screen and (min-width:550px) {
+    .salesgen-upsell-bundle .medium-4 {
+        max-width: 33.33333%;
+        -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%
+    }
+
+    .salesgen-upsell-bundle .large-9 {
+        max-width: 75%;
+        -ms-flex-preferred-size: 75%;
+        flex-basis: 75%
+    }
+
+    .salesgen-upsell-bundle .large-3 {
+        max-width: 25%;
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%
+    }
+}
+
+@media only screen and (max-width:1024px) {
+
+    .sg-thankyou .sg-upsell-lightbox-content,
+    .sg-upsell-lightbox-content {
+        width: 100%
+    }
+
+    .sg-upsell-lightbox .sg-upsell-lightbox-body {
+        width: 95%
+    }
+
+    .sg-upsell-cart-coupon {
+        text-align: center
+    }
+
+    .salesgen-upsell-cart-items li img {
+        height: 170px;
+        max-height: 170px
+    }
+}
+
+@media only screen and (max-width:800px) {
+    body .sg-upsell-multi_cols .salesgen-upsell-popup-items li {
+        max-width: 50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        padding: 0 7px 19.6px
+    }
+
+    body .sg-thankyou .salesgen-upsell-cart-items li img {
+        height: 200px;
+        max-height: 200px
+    }
+}
+
+@media only screen and (max-width:479px) {
+    body .salesgen-upsell-cart-items {
+        width: initial
+    }
+
+    body .sg-upsell-cart-icon svg {
+        width: 20px;
+        height: 20px
+    }
+
+    body .sg-upsell-popup-total-price {
+        padding: 0 5px
+    }
+
+    .sg-modal-buttons a.sg-view-cart-btn,
+    body .sg-modal-buttons a.sg-proceed-checkout {
+        padding: 0 18px
+    }
+
+    body .sg-upsell-lightbox-content-message h3 {
+        font-size: 13px
+    }
+
+    body .sg-btn-cart-view .woocommerce-Price-amount,
+    body .sg-cart-view-wrp .woocommerce-Price-amount,
+    body .sg-upsell-lightbox-content .salesgen-discount-notices {
+        font-size: 14px
+    }
+
+    body .sg-upsell-cart-icon {
+        width: 20px
+    }
+
+    body .sg-upsell-count-badges {
+        font-size: 8px
+    }
+
+    .salesgen-upsell-bundle .row-small>.col {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .salesgen-upsell-wrapper .woocommerce-Price-amount,
+    .sg-has-button .salesgen-bmsm-item-label {
+        display: inline-block
+    }
+
+    .sgbmsm-product-options {
+        right: -50%
+    }
+
+    a.sgbmsm-product-options-show {
+        font-size: .7em;
+        width: 100%
+    }
+
+    .salesgen-upsell-item:first-child .sgbmsm-product-options {
+        left: 0;
+        right: auto
+    }
+
+    .sg-upsell-lightbox-content-message {
+        font-size: 22px
+    }
+
+    .sg-popup-product-thumb {
+        float: left
+    }
+
+    .sg-upsell-lightbox-content-message span {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0;
+        margin: 0;
+        display: flex
+    }
+
+    .sg-upsell-lightbox .sg-upsell-lightbox-body {
+        width: 95%
+    }
+
+    .sg-upsell-lightbox-content {
+        height: calc(100vh - 100px)
+    }
+
+    .salesgen-upsell-item-list-heading-wrp,
+    .sgbmsm-price-checkbox-wrp {
+        flex: 1
+    }
+
+    li.salesgen-upsell-item-list {
+        display: inline-block;
+        width: 100%
+    }
+
+    .sg-has-button .salesgen-bmsm-item-title-wrp {
+        display: block;
+        padding: 5px 0
+    }
+
+    .salesgen-bmsm-items.sg-has-button li {
+        display: inline-block;
+        height: 60px
+    }
+
+    .sg-has-button .salesgen-bmsm-item-text {
+        display: block;
+        padding: 8px 0
+    }
+
+    .salesgen-upsell-cart-items .salesgen-upsell-popup-item-list.col {
+        max-width: 50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        padding: 0 7px 19.6px
+    }
+
+    body .button.salesgen-select-options {
+        float: none
+    }
+
+    .sgbmsm-price-checkbox-wrp {
+        margin-bottom: 15px
+    }
+
+    body .salesgen-upsell-options.active {
+        left: 28px;
+        right: auto
+    }
+
+    body .sgbmsm-price-checkbox-wrp {
+        padding-left: 28px
+    }
+}
+
+.sgshake {
+    -webkit-animation: .5s ease-in-out sgshake;
+    animation: .5s ease-in-out sgshake
+}
+
+.sgloading {
+    opacity: 1 !important;
+    position: relative;
+    color: rgba(255, 255, 255, .05);
+    pointer-events: none !important
+}
+
+.sgloading:after {
+    -webkit-animation: .5s linear infinite sgspin;
+    animation: .5s linear infinite sgspin;
+    border: 2px solid #fff;
+    border-radius: 32px;
+    border-right-color: transparent !important;
+    border-top-color: transparent !important;
+    content: "";
+    display: block;
+    height: 16px;
+    top: 50%;
+    margin-top: -8px;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    width: 16px
+}
+
+@-webkit-keyframes sgspin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes sgspin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes sgshake {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0)
+    }
+
+    20%,
+    60% {
+        -webkit-transform: translateX(-10px)
+    }
+
+    40%,
+    80% {
+        -webkit-transform: translateX(10px)
+    }
+}
+
+@keyframes sgshake {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    20%,
+    60% {
+        transform: translateX(-10px)
+    }
+
+    40%,
+    80% {
+        transform: translateX(10px)
+    }
+}
+
+.salesgen-ub-announcement-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center
+}
+
+.salesgen-ub-announcement-top.is-fixed {
+    position: fixed
+}
+
+.salesgen-ub-announcement-product {
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: block
+}
+
+.salesgen-upsell-item-info .woocommerce-loop-product__title {
+    margin: 5px 0
+}
