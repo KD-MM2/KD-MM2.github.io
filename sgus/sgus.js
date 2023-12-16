@@ -31,26 +31,26 @@
         b.$form.trigger('update_variation_values')
     };
     g.prototype.isValid = function() {
-        // if (this.$form.data('submitting') == 1) {
-        //     if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
-        //         this.$form.find(".sg-is-invalid").removeClass('sg-is-invalid sgshake');
-        //         this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
-        //         this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
-        //         return false
-        //     }
-        //     if (this.$form.find('.woocommerce-invalid').length > 0) {
-        //         return false
-        //     }
-        //     if (this.$form.find('.wcpa_validation_error').length > 0) {
-        //         return false
-        //     }
-        //     let variation = this.$form.find('[name=variation_id]');
-        //     if (variation.length > 0 && variation.val() == "") {
-        //         return false
-        //     }
-        //     return true
-        // }
-        return true
+        if (this.$form.data('submitting') == 1) {
+            if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
+                this.$form.find(".sg-is-invalid").removeClass('sg-is-invalid sgshake');
+                this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
+                this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
+                return false
+            }
+            if (this.$form.find('.woocommerce-invalid').length > 0) {
+                return false
+            }
+            if (this.$form.find('.wcpa_validation_error').length > 0) {
+                return false
+            }
+            let variation = this.$form.find('[name=variation_id]');
+            if (variation.length > 0 && variation.val() == "") {
+                return false
+            }
+            return true
+        }
+        return false
     };
     g.prototype.onAddToCart = function(b) {
         var c = b.data.bundleForm;
@@ -316,7 +316,7 @@
                 }
             }
         }
-        return match
+        return true
     };
     h.prototype.updatePriceHtml = function(a) {
         this.$elm.find('.sgbmsm-price-checkbox').html(a)
@@ -476,23 +476,23 @@
         return false
     };
     j.prototype.isValid = function() {
-        // if (this.$form.data('submitting') == 1) {
-        //     if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
-        //         this.$form.find(".sg-is-invalid").removeClass('sg-is-invalid sgshake');
-        //         this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
-        //         this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
-        //         return false
-        //     }
-        //     if (this.$form.find('.woocommerce-invalid').length > 0) {
-        //         return false
-        //     }
-        //     let variation = this.$form.find('[name=variation_id]');
-        //     if (variation.length > 0 && variation.val() == "") {
-        //         return false
-        //     }
-        //     return true
-        // }
-        return true
+        if (this.$form.data('submitting') == 1) {
+            if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
+                this.$form.find(".sg-is-invalid").removeClass('sg-is-invalid sgshake');
+                this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
+                this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
+                return false
+            }
+            if (this.$form.find('.woocommerce-invalid').length > 0) {
+                return false
+            }
+            let variation = this.$form.find('[name=variation_id]');
+            if (variation.length > 0 && variation.val() == "") {
+                return false
+            }
+            return true
+        }
+        return false
     };
     var k = function(a) {
         var b = this;
@@ -779,22 +779,22 @@
         return false
     };
     k.prototype.isValid = function() {
-        // if (this.$form.data('submitting') == 1) {
-        //     if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
-        //         this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
-        //         this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
-        //         return false
-        //     }
-        //     let variation = this.$form.find('[name=variation_id]');
-        //     if (variation.length > 0 && variation.val() == "") {
-        //         return false
-        //     }
-        //     if (this.$form.find('.woocommerce-invalid').length > 0) {
-        //         return false
-        //     }
-        //     return true
-        // }
-        return true
+        if (this.$form.data('submitting') == 1) {
+            if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
+                this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
+                this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
+                return false
+            }
+            let variation = this.$form.find('[name=variation_id]');
+            if (variation.length > 0 && variation.val() == "") {
+                return false
+            }
+            if (this.$form.find('.woocommerce-invalid').length > 0) {
+                return false
+            }
+            return true
+        }
+        return false
     };
     window.sgupsell = {
         version: '0.7',
