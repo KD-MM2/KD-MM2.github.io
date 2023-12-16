@@ -1,4 +1,5 @@
 (function($) {
+    const print = console.log;
     var g = function(a) {
         var b = this;
         b.$form = a;
@@ -150,23 +151,23 @@
                 a.trigger('custom_options')
             })
         });
-        setTimeout(function() {
-            let display_total = c.$attributeFields.length, wpca_items = c.$elm.find('.wcpa_form_item');
-            if (wpca_items.length > 0) {
-                display_total += wpca_items.length;
-                wpca_items.each(function() {
-                    let _that = $(this);
-                    if (_that.css('display') == 'none' || _that.hasClass('wcpa_type_paragraph')) display_total--
-                })
-            }
-            if (display_total < sgbmsmcfg.options.salesgen_upsell_bundle_hide_options_when) {
-                c.$selectOptions.removeClass('active-select-options')
-            }
-            a.trigger('check_variations');
-            if (wpca_items.length > 0) {
-                wpca_items.find('input:first-child, select:first-child, textarea:first-child, [required="required"]').trigger('change')
-            }
-        }, 50)
+        // setTimeout(function() {
+        //     let display_total = c.$attributeFields.length, wpca_items = c.$elm.find('.wcpa_form_item');
+        //     if (wpca_items.length > 0) {
+        //         display_total += wpca_items.length;
+        //         wpca_items.each(function() {
+        //             let _that = $(this);
+        //             if (_that.css('display') == 'none' || _that.hasClass('wcpa_type_paragraph')) display_total--
+        //         })
+        //     }
+        //     if (display_total < sgbmsmcfg.options.salesgen_upsell_bundle_hide_options_when) {
+        //         c.$selectOptions.removeClass('active-select-options')
+        //     }
+        //     a.trigger('check_variations');
+        //     if (wpca_items.length > 0) {
+        //         wpca_items.find('input:first-child, select:first-child, textarea:first-child, [required="required"]').trigger('change')
+        //     }
+        // }, 50)
     };
     h.prototype.validateField = function(e) {
         var a = $(this),
@@ -316,7 +317,7 @@
                 }
             }
         }
-        return true
+        return match
     };
     h.prototype.updatePriceHtml = function(a) {
         this.$elm.find('.sgbmsm-price-checkbox').html(a)
@@ -339,11 +340,11 @@
                 display: 'block'
             })
         } else {
-            setTimeout(function() {
-                affect_elm.css({
-                    display: 'none'
-                })
-            }, 100)
+            // setTimeout(function() {
+            //     affect_elm.css({
+            //         display: 'none'
+            //     })
+            // }, 100)
         }
         affect_elm.toggleClass('salesgen-upsell-selected');
         bundle.$product.toggleClass('salesgen-upsell-item-list-selected');
