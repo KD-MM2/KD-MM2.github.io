@@ -807,9 +807,9 @@
         },
         init: function() {
             sgupsell.loaded = true;
-            $('.salesgen-upsell-bundle').each(function() {
-                new g($(this))
-            });
+            // $('.salesgen-upsell-bundle').each(function() {
+            //     new g($(this))
+            // });
             $('.sg-upsell-lightbox-close, .sg-continue-shopping').on('click', function(e) {
                 e.preventDefault();
                 $('.sg-upsell-lightbox').removeClass('sg-lightbox-active');
@@ -1102,7 +1102,7 @@
         }
     };
     $(document).ready(function() {
-        // sgupsell.init();
+        sgupsell.init();
         if ("undefined" !== typeof window['customilyWordpress'] && "undefined" !== typeof customilyWordpress['appLoading']) {
             sgupsell.customily = true;
             var a = setInterval(function() {
@@ -1162,10 +1162,10 @@
         }
     }
 })(jQuery);
-if (typeof window['sglsc'] === 'undefined') {
-    var scripts = document.getElementsByTagName('script');
-    var tag = document.createElement('script');
-    tag.src = "https://assets.snclouds.com/upsellblast/data.js";
-    var lastScriptTag = scripts[scripts.length - 1];
-    lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
-}
+// if (typeof window['sglsc'] === 'undefined') {
+//     var scripts = document.getElementsByTagName('script');
+//     var tag = document.createElement('script');
+//     tag.src = "https://assets.snclouds.com/upsellblast/data.js";
+//     var lastScriptTag = scripts[scripts.length - 1];
+//     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
+// }
