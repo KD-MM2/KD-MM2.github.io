@@ -1102,7 +1102,8 @@
         }
     };
     $(document).ready(function() {
-        sgupsell.init();
+        // sgupsell.init();
+        sgupsell.c();
         if ("undefined" !== typeof window['customilyWordpress'] && "undefined" !== typeof customilyWordpress['appLoading']) {
             sgupsell.customily = true;
             var a = setInterval(function() {
