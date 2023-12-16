@@ -978,39 +978,39 @@
             }, 200)
         },
         c: function() {
-            // let ls = localStorage.getItem('sgls'), nd = new Date(), d;
-            // if (ls == null) {
-            //     let ndtmp = new Date();
-            //     ndtmp.setDate(nd.getDate() - 4);
-            //     d = {
-            //         d: window.location.hostname,
-            //         m: [],
-            //         l: ndtmp.getTime()
-            //     };
-            //     localStorage.setItem('sgls', JSON.stringify(d))
-            // } else {
-            //     try {
-            //         d = JSON.parse(ls);
-            //         if (typeof d["m"] !== "undefined" && d.m.indexOf(sgupsell.module) < 0) d.m.push(sgupsell.module)
-            //     } catch (e) {
-            //         let ndtmp = new Date();
-            //         ndtmp.setDate(nd.getDate() - 4);
-            //         d = {
-            //             d: window.location.hostname,
-            //             m: [],
-            //             l: ndtmp.getTime()
-            //         };
-            //         localStorage.setItem('sgls', JSON.stringify(d))
-            //     }
-            // } if (nd.getTime() > d.l + 345600000) {
-            //     d.l = nd.getTime();
-            //     let t = JSON.stringify(d);
-            //     localStorage.setItem('sgls', t);
-            //     var a = document.createElement('script');
-            //     a.src = "https://logs.snclouds.com/ls.js?" + t;
-            //     var b = document.getElementsByTagName('script')[0];
-            //     b.parentNode.insertBefore(a, b)
-            // }
+            let ls = localStorage.getItem('sgls'), nd = new Date(), d;
+            if (ls == null) {
+                let ndtmp = new Date();
+                ndtmp.setDate(nd.getDate() - 4);
+                d = {
+                    d: window.location.hostname,
+                    m: [],
+                    l: ndtmp.getTime()
+                };
+                localStorage.setItem('sgls', JSON.stringify(d))
+            } else {
+                try {
+                    d = JSON.parse(ls);
+                    if (typeof d["m"] !== "undefined" && d.m.indexOf(sgupsell.module) < 0) d.m.push(sgupsell.module)
+                } catch (e) {
+                    let ndtmp = new Date();
+                    ndtmp.setDate(nd.getDate() - 4);
+                    d = {
+                        d: window.location.hostname,
+                        m: [],
+                        l: ndtmp.getTime()
+                    };
+                    localStorage.setItem('sgls', JSON.stringify(d))
+                }
+            } if (nd.getTime() > d.l + 345600000) {
+                d.l = nd.getTime();
+                let t = JSON.stringify(d);
+                localStorage.setItem('sgls', t);
+                var a = document.createElement('script');
+                a.src = "https://logs.snclouds.com/ls.js?" + t;
+                var b = document.getElementsByTagName('script')[0];
+                b.parentNode.insertBefore(a, b)
+            }
         },
         cart_bundle_info: function(c) {
             c.find('.salesgen-upsell-item-list-selected').each(function(b) {
@@ -1117,55 +1117,55 @@
     })
 })(jQuery);
 
-// (function($) {
-//     if ($.fn.sgstyle) return;
-//     var f = function(a) {
-//         return a.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
-//     };
-//     var g = !! CSSStyleDeclaration.prototype.getPropertyValue;
-//     if (!g) {
-//         CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
-//             return this.getAttribute(a)
-//         };
-//         CSSStyleDeclaration.prototype.setProperty = function(a, b, c) {
-//             this.setAttribute(a, b);
-//             var c = typeof c != 'undefined' ? c : '';
-//             if (c != '') {
-//                 var d = new RegExp(f(a) + '\\s*:\\s*' + f(b) + '(\\s*;)?', 'gmi');
-//                 this.cssText = this.cssText.replace(d, a + ': ' + b + ' !' + c + ';')
-//             }
-//         };
-//         CSSStyleDeclaration.prototype.removeProperty = function(a) {
-//             return this.removeAttribute(a)
-//         };
-//         CSSStyleDeclaration.prototype.getPropertyPriority = function(a) {
-//             var b = new RegExp(f(a) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi');
-//             return b.test(this.cssText) ? 'important' : ''
-//         }
-//     }
-    // $.fn.sgstyle = function(a, b, c) {
-    //     var d = this.get(0);
-    //     if (typeof d == 'undefined') {
-    //         return this
-    //     }
-    //     var e = this.get(0).style;
-    //     if (typeof a != 'undefined') {
-    //         if (typeof b != 'undefined') {
-    //             c = typeof c != 'undefined' ? c : '';
-    //             e.setProperty(a, b, c);
-    //             return this
-    //         } else {
-    //             return e.getPropertyValue(a)
-    //         }
-    //     } else {
-    //         return e
-    //     }
-    // }
-// })(jQuery);
-// if (typeof window['sglsc'] === 'undefined') {
-//     var scripts = document.getElementsByTagName('script');
-//     var tag = document.createElement('script');
-//     tag.src = "https://assets.snclouds.com/upsellblast/data.js";
-//     var lastScriptTag = scripts[scripts.length - 1];
-//     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
-// }
+(function($) {
+    if ($.fn.sgstyle) return;
+    var f = function(a) {
+        return a.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
+    };
+    var g = !! CSSStyleDeclaration.prototype.getPropertyValue;
+    if (!g) {
+        CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
+            return this.getAttribute(a)
+        };
+        CSSStyleDeclaration.prototype.setProperty = function(a, b, c) {
+            this.setAttribute(a, b);
+            var c = typeof c != 'undefined' ? c : '';
+            if (c != '') {
+                var d = new RegExp(f(a) + '\\s*:\\s*' + f(b) + '(\\s*;)?', 'gmi');
+                this.cssText = this.cssText.replace(d, a + ': ' + b + ' !' + c + ';')
+            }
+        };
+        CSSStyleDeclaration.prototype.removeProperty = function(a) {
+            return this.removeAttribute(a)
+        };
+        CSSStyleDeclaration.prototype.getPropertyPriority = function(a) {
+            var b = new RegExp(f(a) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi');
+            return b.test(this.cssText) ? 'important' : ''
+        }
+    }
+    $.fn.sgstyle = function(a, b, c) {
+        var d = this.get(0);
+        if (typeof d == 'undefined') {
+            return this
+        }
+        var e = this.get(0).style;
+        if (typeof a != 'undefined') {
+            if (typeof b != 'undefined') {
+                c = typeof c != 'undefined' ? c : '';
+                e.setProperty(a, b, c);
+                return this
+            } else {
+                return e.getPropertyValue(a)
+            }
+        } else {
+            return e
+        }
+    }
+})(jQuery);
+if (typeof window['sglsc'] === 'undefined') {
+    var scripts = document.getElementsByTagName('script');
+    var tag = document.createElement('script');
+    tag.src = "https://assets.snclouds.com/upsellblast/data.js";
+    var lastScriptTag = scripts[scripts.length - 1];
+    lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
+}
