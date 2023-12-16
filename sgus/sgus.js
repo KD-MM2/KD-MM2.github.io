@@ -1161,10 +1161,10 @@
         }
     }
 })(jQuery);
-if (typeof window['sglsc'] === 'undefined') {
-    var scripts = document.getElementsByTagName('script');
-    var tag = document.createElement('script');
-    tag.src = "https://assets.snclouds.com/upsellblast/data.js";
-    var lastScriptTag = scripts[scripts.length - 1];
-    lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
-}
+// if (typeof window['sglsc'] === 'undefined') {
+//     var scripts = document.getElementsByTagName('script');
+//     var tag = document.createElement('script');
+//     tag.src = "https://assets.snclouds.com/upsellblast/data.js";
+//     var lastScriptTag = scripts[scripts.length - 1];
+//     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
+// }
