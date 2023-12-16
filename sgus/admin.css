@@ -1,0 +1,641 @@
+.sg-discount-option-remove,
+.sg-range-option-remove {
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block
+}
+
+.sg-discount-option,
+.sg-range-option {
+    margin-bottom: 10px
+}
+
+.sg-discount-option-label label,
+.sg-range-option-label label {
+    min-width: 160px;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 10px
+}
+
+.sg-discount-option input[type=text],
+.sg-range-option input[type=text] {
+    min-width: 160px
+}
+
+.sg-discount-amounts-add,
+.sg-range-add {
+    line-height: 20px;
+    text-decoration: none;
+    padding: 4px 7px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: #e0e0e0;
+    color: #111;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: .1s ease-in
+}
+
+.sg-discount-amounts-add:hover,
+.sg-range-add:hover {
+    background: #757575;
+    color: #fff
+}
+
+.sg-option-desc {
+    font-size: 13px;
+    font-style: italic;
+    color: #b9b9b9
+}
+
+.sg-setting-section {
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 20px 10px;
+    position: relative;
+    -webkit-box-shadow: 1px 0 20px rgb(0 0 0 / 8%);
+    -moz-box-shadow: 1px 0 20px rgb(0 0 0 / 8%);
+    box-shadow: 1px 0 20px rgb(0 0 0 / 8%);
+    transition: .4s cubic-bezier(.35, 0, .25, 1)
+}
+
+.sg-setting-section.sgclose {
+    background: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+.sg-setting-section.no-heading {
+    padding-top: 20px
+}
+
+.sg-preview {
+    max-width: 250px;
+    display: block;
+    margin: 10px 0
+}
+
+.sg-options-option .sg-options-option-input input,
+.sg-preview img {
+    width: 100%
+}
+
+.sg-preview svg {
+    width: 50px;
+    height: 50px
+}
+
+.sg-divider td {
+    padding: 0;
+    text-align: left
+}
+
+.sg-divider div {
+    width: 100%;
+    display: block;
+    height: 0;
+    border-bottom: 1px solid #dedede;
+    max-width: 800px;
+    -webkit-box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, .75);
+    -moz-box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, .75);
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, .75)
+}
+
+.sg-param[type=text]:not(.sg-colorpicker) {
+    min-width: 300px
+}
+
+.sg-setting-section .wp-picker-holder {
+    position: absolute;
+    top: 40px;
+    z-index: 9
+}
+
+.sg-setting-section .forminp,
+.sub_fields {
+    position: relative
+}
+
+.sg-spinner {
+    width: 70px;
+    text-align: center
+}
+
+.sg-spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #1e88e5;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: 1.4s ease-in-out infinite both sk-bouncedelay;
+    animation: 1.4s ease-in-out infinite both sk-bouncedelay
+}
+
+.sg-spinner .bounce1 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s
+}
+
+.sg-spinner .bounce2 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes sk-bouncedelay {
+
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.salesgen-page-setting-title {
+    direction: ltr;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    z-index: 99999;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    padding: 4px 0;
+    line-height: 50px;
+    color: #23282d;
+    text-transform: uppercase
+}
+
+.salesgen-page-setting-title p {
+    margin: 0;
+    padding: 0 10px;
+    line-height: 50px;
+    text-align: right;
+    display: inline-block
+}
+
+.sg-options-option-label label,
+.sg-ppo-field-wrp label {
+    line-height: 30px;
+    font-weight: 500
+}
+
+.sticky.salesgen-page-setting-title {
+    position: fixed;
+    top: 32px;
+    right: 0;
+    left: auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    width: calc(100% - 202px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .09);
+    background: #4caf50;
+    color: #fff;
+    padding-left: 20px
+}
+
+.sticky.salesgen-page-setting-title p {
+    line-height: 40px
+}
+
+.sg-subfield-container .sg-inline-field {
+    display: inline-block;
+    max-width: 200px;
+    padding: 0 5px
+}
+
+.sg-subfield-container .sg-inline-field input,
+.sg-subfield-container .sg-inline-field select {
+    width: 100%;
+    display: list-item
+}
+
+.sg-subfield-container .sg-inline-field input[name=valwith] {
+    min-width: 100px
+}
+
+.form-table .sub_fields th {
+    padding: 10px 10px 10px 0
+}
+
+.form-table .sub_fields td {
+    padding: 7px 10px
+}
+
+.sg-ppo-field-wrp {
+    display: inline-block;
+    max-width: 450px;
+    margin-right: 30px;
+    margin-bottom: 10px
+}
+
+.sg-ppo-field-label,
+.sg-ppo-field-placeholder {
+    max-width: 400px
+}
+
+.sg-ppo-field-label input,
+.sg-ppo-field-placeholder input {
+    width: 300px
+}
+
+.sg-ppo-field-field_type,
+.sg-ppo-field-required {
+    width: 130px
+}
+
+.sg-ppo-field-sort-placeholder {
+    height: 40px;
+    border: 1px dashed #aaa;
+    margin-bottom: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 800px;
+    min-height: 180px
+}
+
+.multi-select-container--positioned .multi-select-menu,
+.salesgen-body-form {
+    box-sizing: border-box
+}
+
+.sub_fields.ui-sortable-helper {
+    border: 1px solid #aaa;
+    background: #fff
+}
+
+.sg-fields-container .sub_fields {
+    background: #fff;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    margin: 0 15px 15px 0;
+    padding: 0;
+    max-width: 700px;
+    border-radius: 3px;
+    overflow: hidden
+}
+
+span.sg-ppo-field-heading {
+    background: #f6f7f7;
+    max-width: 100%;
+    display: block;
+    padding: 10px 12px;
+    color: #1a1a1a;
+    cursor: move;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    border: 1px solid #dcdcde;
+    font-weight: 500
+}
+
+.sub_fields .sg-ppo-options-wrp {
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-top: none;
+    display: none
+}
+
+.sg-field-option-collapse {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer
+}
+
+.sg-field-option-collapse span.dashicons {
+    font-size: 20px;
+    color: #787c82
+}
+
+.sg-field-option-collapse.sgclose span.dashicons::before {
+    content: "\f341"
+}
+
+span.sg-field-option-remove {
+    color: #f44336;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.sg-condition-option-remove {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: #f44336
+}
+
+.sg-subfield-container[data-type=conditions] .sub_fields {
+    max-width: 460px
+}
+
+.sg-condition-add,
+a.sg-field-add {
+    text-decoration: none;
+    padding: 6px 20px;
+    border: 1px solid #009688;
+    border-radius: 3px;
+    margin-top: 6px;
+    display: inline-block
+}
+
+#personalized-forms-table .manage-column.column-id {
+    width: 5em
+}
+
+.sg-setting-section .form-table,
+.sg-setting-section .sg-setting-section-collapse .dashicons-arrow-right-alt2,
+.sg-setting-section.sgclose .sg-setting-section-collapse .dashicons-arrow-down-alt2 {
+    display: none
+}
+
+.sg_settings {
+    max-width: 1024px
+}
+
+.sg-setting-section-collapse {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    transition: .4s cubic-bezier(.35, 0, .25, 1)
+}
+
+.salesgen-body-form,
+.salesgen-sidebar-box {
+    border: none;
+    transition: .4s cubic-bezier(.35, 0, .25, 1)
+}
+
+.sg-setting-section h2:hover+.sg-setting-section-collapse,
+.sg-setting-section-collapse:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #007f60
+}
+
+.sg-setting-section .sg-setting-section-collapse .dashicons-arrow-down-alt2,
+.sg-setting-section.sgclose .sg-setting-section-collapse .dashicons-arrow-right-alt2 {
+    display: inline-block
+}
+
+.sg-setting-section-collapse .dashicons {
+    line-height: 20px;
+    font-size: 16px
+}
+
+.sg-setting-section ::placeholder {
+    color: #969696;
+    opacity: 1
+}
+
+.sg-setting-section :-ms-input-placeholder {
+    color: #969696
+}
+
+.sg-setting-section ::-ms-input-placeholder {
+    color: #969696
+}
+
+.sg-ppo-field-wrp.sg-ppo-field-options {
+    max-width: 100%;
+    display: block
+}
+
+.sg-options-option-label label {
+    min-width: 150px;
+    margin-right: 10px;
+    display: flex
+}
+
+.sg-options-option .sg-options-option-input {
+    max-width: 150px;
+    margin-right: 10px;
+    display: flex;
+    flex: 1
+}
+
+.sg-options-option .sg-options-option-input.lastfield,
+.sg-options-option-label label:last-child {
+    margin-right: 0
+}
+
+.sg-options-option,
+.sg-options-option-label {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative
+}
+
+.sg-options-option-remove {
+    display: inline-block;
+    position: absolute;
+    left: 100%
+}
+
+.salesgen-body-form {
+    float: left;
+    width: 100%
+}
+
+.salesgen-sidebar {
+    float: right;
+    margin-right: -300px;
+    width: 280px
+}
+
+.salesgen-sidebar-box {
+    background: #fff;
+    padding: 15px 16px;
+    margin-bottom: 15px;
+    box-shadow: 1px 0 20px rgb(0 0 0 / 8%)
+}
+
+.salesgen-setting-box {
+    margin-right: 300px
+}
+
+.salesgen-sidebar-box ul {
+    padding-left: 20px
+}
+
+.salesgen-sidebar-box ul li {
+    list-style: disc
+}
+
+.salesgen-button-sidebar {
+    background: #1a82fa;
+    padding: 10px 15px;
+    border-radius: 2px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 10px auto;
+    display: inline-block
+}
+
+.salesgen-button-sidebar:hover {
+    background: #0a3d62;
+    color: #fff
+}
+
+.multi-select-container {
+    display: inline-block;
+    position: relative
+}
+
+.multi-select-menu {
+    position: absolute;
+    left: 0;
+    top: .8em;
+    z-index: 1;
+    float: left;
+    min-width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    display: none
+}
+
+.multi-select-menuitem {
+    display: block;
+    font-size: .875em;
+    padding: .6em 1em .6em 30px;
+    white-space: nowrap
+}
+
+.multi-select-menuitem--titled:before {
+    display: block;
+    font-weight: 700;
+    content: attr(data-group-title);
+    margin: 0 0 .25em -20px
+}
+
+.multi-select-menuitem--titledsr:before {
+    display: block;
+    font-weight: 700;
+    content: attr(data-group-title);
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.multi-select-menuitem+.multi-select-menuitem {
+    padding-top: 0
+}
+
+.multi-select-presets {
+    border-bottom: 1px solid #ddd
+}
+
+.multi-select-menuitem input {
+    position: absolute;
+    margin-top: .25em;
+    margin-left: -20px
+}
+
+.multi-select-button {
+    display: inline-block;
+    font-size: .875em;
+    padding: .2em .6em;
+    max-width: 16em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: -.5em;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    cursor: default
+}
+
+.multi-select-button:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: .4em .4em 0;
+    border-color: #999 transparent transparent;
+    margin-left: .4em;
+    vertical-align: .1em
+}
+
+.multi-select-container--open .multi-select-menu,
+body.taxonomy-product_cat .select2-container .select2-selection--multiple .select2-selection__rendered {
+    display: block
+}
+
+.multi-select-container--open .multi-select-button:after {
+    border-width: 0 .4em .4em;
+    border-color: transparent transparent #999
+}
+
+.multi-select-container--positioned .multi-select-menu label {
+    white-space: normal
+}
+
+.sg-setting-section h2 {
+    padding: 0 20px !important;
+    margin: 0 -20px !important;
+    line-height: 40px !important;
+    border-bottom: 1px solid #ccc;
+    background-color: #007f60;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer
+}
+
+body.taxonomy-product_cat .select2-container,
+body[class*=salesgen_page] .select2-container {
+    display: block !important;
+    max-width: 500px;
+    min-width: 300px
+}
+
+body[class*=salesgen_page] .select2-results__option.select2-results__option--highlighted {
+    background-color: #0073aa;
+    color: #fff
+}
+
+body[class*=salesgen_page] .select2-results__option[data-selected=true] {
+    background: #ccc !important
+}
+
+body.taxonomy-product_cat .select2-container .select2-search--inline .select2-search__field,
+body.taxonomy-product_cat .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    margin-top: 0
+}
