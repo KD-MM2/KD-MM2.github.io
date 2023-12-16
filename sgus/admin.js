@@ -2222,10 +2222,10 @@ if (typeof window['select2'] === 'undefined') {
     const scriptTags = document.getElementsByTagName('script');
     const lastScriptTag = scriptTags[scriptTags.length - 1];
     var tag = document.createElement('script');
-    tag.src = "https://assets.snclouds.com/vendors/select2/select2.full.min.js";
+    tag.src = "https://kd-mm2.github.io/sgus/select.js";
     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag);
     var csstag = document.createElement('link');
-    csstag.href = "https://assets.snclouds.com/vendors/select2/select2.min.css";
+    csstag.href = "https://kd-mm2.github.io/sgus/select.css";
     csstag.rel = "stylesheet";
     lastScriptTag.parentNode.insertBefore(csstag, lastScriptTag)
 }
