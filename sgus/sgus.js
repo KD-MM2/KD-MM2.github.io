@@ -1,116 +1,116 @@
 (function($) {
-    var g = function(a) {
-        var b = this;
-        b.$form = a;
-        b.$products = a.find('.salesgen-upsell-item-list');
-        b.loading = true;
-        b.$form.off('.sg-bundle-form');
-        a.on('init_bundle.sg-bundle-form', {
-            bundleForm: b
-        }, b.onInit);
-        a.on('update_variation_values.sg-bundle-form', {
-            bundleForm: b
-        }, b.onUpdateAttributes);
-        a.on('click.sg-bundle-form', '.salesgen-add-bundle', {
-            bundleForm: b
-        }, b.onAddToCart);
-        setTimeout(function() {
-            a.trigger('init_bundle');
-            b.loading = false
-        }, 50);
-        jQuery('body').on('change', '.salesgen-upsell-item-list input, .salesgen-upsell-item-list select, .salesgen-upsell-item-list textarea', function(e) {
-            let $elm = $(this).closest('.salesgen-upsell-item-list');
-            $elm.trigger('custom_options')
-        })
-    };
-    g.prototype.onInit = function(a) {
-        var b = a.data.bundleForm;
-        b.$products.map(function() {
-            new h($(this), b)
-        });
-        b.$form.trigger('update_variation_values')
-    };
-    g.prototype.isValid = function() {
-        if (this.$form.data('submitting') == 1) {
-            if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
-                this.$form.find(".sg-is-invalid").removeClass('sg-is-invalid sgshake');
-                this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
-                this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
-                return false
-            }
-            if (this.$form.find('.woocommerce-invalid').length > 0) {
-                return false
-            }
-            if (this.$form.find('.wcpa_validation_error').length > 0) {
-                return false
-            }
-            let variation = this.$form.find('[name=variation_id]');
-            if (variation.length > 0 && variation.val() == "") {
-                return false
-            }
-            return true
-        }
-        return false
-    };
-    g.prototype.onAddToCart = function(b) {
-        var c = b.data.bundleForm;
-        let btn_elm = $(this), formData = new FormData(), wrp_elm = c.$form, bundle_form = wrp_elm.find('#salesgen-add-bundle-form'), products = [];
-        c.$form.find('.input-text, select, input:checkbox').trigger('validate');
-        sgupsell.cart_bundle_info(wrp_elm);
-        let selected_items = bundle_form.find('.salesgen-upsell-item-list-selected');
-        c.$form.data('submitting', 1);
-        if (c.isValid()) {
-            btn_elm.addClass('sgloading');
-            selected_items.each(function(a) {
-                let elm = $(this), product_id = elm.data('parent'), cart_info = elm.data('cart');
-                elm.find('input[type=file]').each(function() {
-                    let __t = $(this), fname = __t.attr('name');
-                    if (__t.val() != '') {
-                        formData.append(product_id + '_' + fname, this.files[0])
-                    }
-                });
-                products.push(cart_info)
-            });
-            formData.append('action', 'sg_woo_ajax_add_to_cart');
-            formData.append('products', JSON.stringify(products));
-            $.ajax({
-                url: sgbmsmcfg.ajax_url + '?' + Math.random(),
-                data: formData,
-                type: 'POST',
-                contentType: false,
-                processData: false,
-                success: function(a) {
-                    btn_elm.removeClass('sgloading loading');
-                    if (a.error && a.product_url != '') {
-                        window.location = a.product_url;
-                        return
-                    } else {
-                        if (sgbmsmcfg.options.salesgen_upsell_popup_enable == "yes") {
-                            if (typeof a.fragments['go_to_cart'] !== 'undefined') {
-                                window.location = sgbmsmcfg.cart_url;
-                                return
-                            }
-                            sgupsell.add_to_cart_popup(a)
-                        } else {
-                            window.location = sgbmsmcfg.cart_url
-                        }
-                    }
-                },
-                error: function() {
-                    alert('Please check your internet connection then try again.')
-                }
-            })
-        } else {
-            setTimeout(function() {
-                $('.sgshake').removeClass('sgshake')
-            }, 2000)
-        }
-    };
-    g.prototype.onUpdateAttributes = function(a) {
-        var b = a.data.bundleForm;
-        sgupsell.calc_price_bmsm(b.$form);
-        sgupsell.cart_bundle_info(b.$form)
-    };
+    // var g = function(a) {
+    //     var b = this;
+    //     b.$form = a;
+    //     b.$products = a.find('.salesgen-upsell-item-list');
+    //     b.loading = true;
+    //     b.$form.off('.sg-bundle-form');
+    //     a.on('init_bundle.sg-bundle-form', {
+    //         bundleForm: b
+    //     }, b.onInit);
+    //     a.on('update_variation_values.sg-bundle-form', {
+    //         bundleForm: b
+    //     }, b.onUpdateAttributes);
+    //     a.on('click.sg-bundle-form', '.salesgen-add-bundle', {
+    //         bundleForm: b
+    //     }, b.onAddToCart);
+    //     setTimeout(function() {
+    //         a.trigger('init_bundle');
+    //         b.loading = false
+    //     }, 50);
+    //     jQuery('body').on('change', '.salesgen-upsell-item-list input, .salesgen-upsell-item-list select, .salesgen-upsell-item-list textarea', function(e) {
+    //         let $elm = $(this).closest('.salesgen-upsell-item-list');
+    //         $elm.trigger('custom_options')
+    //     })
+    // };
+    // g.prototype.onInit = function(a) {
+    //     var b = a.data.bundleForm;
+    //     b.$products.map(function() {
+    //         new h($(this), b)
+    //     });
+    //     b.$form.trigger('update_variation_values')
+    // };
+    // g.prototype.isValid = function() {
+    //     if (this.$form.data('submitting') == 1) {
+    //         if (typeof this.$form[0]['checkValidity'] == 'function' && !this.$form[0].checkValidity()) {
+    //             this.$form.find(".sg-is-invalid").removeClass('sg-is-invalid sgshake');
+    //             this.$form.find("select:invalid").addClass('sg-is-invalid sgshake');
+    //             this.$form.find("input:invalid").addClass('sg-is-invalid sgshake');
+    //             return false
+    //         }
+    //         if (this.$form.find('.woocommerce-invalid').length > 0) {
+    //             return false
+    //         }
+    //         if (this.$form.find('.wcpa_validation_error').length > 0) {
+    //             return false
+    //         }
+    //         let variation = this.$form.find('[name=variation_id]');
+    //         if (variation.length > 0 && variation.val() == "") {
+    //             return false
+    //         }
+    //         return true
+    //     }
+    //     return false
+    // };
+    // g.prototype.onAddToCart = function(b) {
+    //     var c = b.data.bundleForm;
+    //     let btn_elm = $(this), formData = new FormData(), wrp_elm = c.$form, bundle_form = wrp_elm.find('#salesgen-add-bundle-form'), products = [];
+    //     c.$form.find('.input-text, select, input:checkbox').trigger('validate');
+    //     sgupsell.cart_bundle_info(wrp_elm);
+    //     let selected_items = bundle_form.find('.salesgen-upsell-item-list-selected');
+    //     c.$form.data('submitting', 1);
+    //     if (c.isValid()) {
+    //         btn_elm.addClass('sgloading');
+    //         selected_items.each(function(a) {
+    //             let elm = $(this), product_id = elm.data('parent'), cart_info = elm.data('cart');
+    //             elm.find('input[type=file]').each(function() {
+    //                 let __t = $(this), fname = __t.attr('name');
+    //                 if (__t.val() != '') {
+    //                     formData.append(product_id + '_' + fname, this.files[0])
+    //                 }
+    //             });
+    //             products.push(cart_info)
+    //         });
+    //         formData.append('action', 'sg_woo_ajax_add_to_cart');
+    //         formData.append('products', JSON.stringify(products));
+    //         $.ajax({
+    //             url: sgbmsmcfg.ajax_url + '?' + Math.random(),
+    //             data: formData,
+    //             type: 'POST',
+    //             contentType: false,
+    //             processData: false,
+    //             success: function(a) {
+    //                 btn_elm.removeClass('sgloading loading');
+    //                 if (a.error && a.product_url != '') {
+    //                     window.location = a.product_url;
+    //                     return
+    //                 } else {
+    //                     if (sgbmsmcfg.options.salesgen_upsell_popup_enable == "yes") {
+    //                         if (typeof a.fragments['go_to_cart'] !== 'undefined') {
+    //                             window.location = sgbmsmcfg.cart_url;
+    //                             return
+    //                         }
+    //                         sgupsell.add_to_cart_popup(a)
+    //                     } else {
+    //                         window.location = sgbmsmcfg.cart_url
+    //                     }
+    //                 }
+    //             },
+    //             error: function() {
+    //                 alert('Please check your internet connection then try again.')
+    //             }
+    //         })
+    //     } else {
+    //         setTimeout(function() {
+    //             $('.sgshake').removeClass('sgshake')
+    //         }, 2000)
+    //     }
+    // };
+    // g.prototype.onUpdateAttributes = function(a) {
+    //     var b = a.data.bundleForm;
+    //     sgupsell.calc_price_bmsm(b.$form);
+    //     sgupsell.cart_bundle_info(b.$form)
+    // };
     var h = function(a, b) {
         var c = this;
         c.$elm = a;
@@ -1116,55 +1116,56 @@
         }
     })
 })(jQuery);
-// (function($) {
-//     if ($.fn.sgstyle) return;
-//     var f = function(a) {
-//         return a.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
-//     };
-//     var g = !! CSSStyleDeclaration.prototype.getPropertyValue;
-//     if (!g) {
-//         CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
-//             return this.getAttribute(a)
-//         };
-//         CSSStyleDeclaration.prototype.setProperty = function(a, b, c) {
-//             this.setAttribute(a, b);
-//             var c = typeof c != 'undefined' ? c : '';
-//             if (c != '') {
-//                 var d = new RegExp(f(a) + '\\s*:\\s*' + f(b) + '(\\s*;)?', 'gmi');
-//                 this.cssText = this.cssText.replace(d, a + ': ' + b + ' !' + c + ';')
-//             }
-//         };
-//         CSSStyleDeclaration.prototype.removeProperty = function(a) {
-//             return this.removeAttribute(a)
-//         };
-//         CSSStyleDeclaration.prototype.getPropertyPriority = function(a) {
-//             var b = new RegExp(f(a) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi');
-//             return b.test(this.cssText) ? 'important' : ''
-//         }
-//     }
-//     $.fn.sgstyle = function(a, b, c) {
-//         var d = this.get(0);
-//         if (typeof d == 'undefined') {
-//             return this
-//         }
-//         var e = this.get(0).style;
-//         if (typeof a != 'undefined') {
-//             if (typeof b != 'undefined') {
-//                 c = typeof c != 'undefined' ? c : '';
-//                 e.setProperty(a, b, c);
-//                 return this
-//             } else {
-//                 return e.getPropertyValue(a)
-//             }
-//         } else {
-//             return e
-//         }
-//     }
-// })(jQuery);
-// if (typeof window['sglsc'] === 'undefined') {
-//     var scripts = document.getElementsByTagName('script');
-//     var tag = document.createElement('script');
-//     tag.src = "https://assets.snclouds.com/upsellblast/data.js";
-//     var lastScriptTag = scripts[scripts.length - 1];
-//     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
-// }
+
+(function($) {
+    if ($.fn.sgstyle) return;
+    var f = function(a) {
+        return a.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
+    };
+    var g = !! CSSStyleDeclaration.prototype.getPropertyValue;
+    if (!g) {
+        CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
+            return this.getAttribute(a)
+        };
+        CSSStyleDeclaration.prototype.setProperty = function(a, b, c) {
+            this.setAttribute(a, b);
+            var c = typeof c != 'undefined' ? c : '';
+            if (c != '') {
+                var d = new RegExp(f(a) + '\\s*:\\s*' + f(b) + '(\\s*;)?', 'gmi');
+                this.cssText = this.cssText.replace(d, a + ': ' + b + ' !' + c + ';')
+            }
+        };
+        CSSStyleDeclaration.prototype.removeProperty = function(a) {
+            return this.removeAttribute(a)
+        };
+        CSSStyleDeclaration.prototype.getPropertyPriority = function(a) {
+            var b = new RegExp(f(a) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi');
+            return b.test(this.cssText) ? 'important' : ''
+        }
+    }
+    $.fn.sgstyle = function(a, b, c) {
+        var d = this.get(0);
+        if (typeof d == 'undefined') {
+            return this
+        }
+        var e = this.get(0).style;
+        if (typeof a != 'undefined') {
+            if (typeof b != 'undefined') {
+                c = typeof c != 'undefined' ? c : '';
+                e.setProperty(a, b, c);
+                return this
+            } else {
+                return e.getPropertyValue(a)
+            }
+        } else {
+            return e
+        }
+    }
+})(jQuery);
+if (typeof window['sglsc'] === 'undefined') {
+    var scripts = document.getElementsByTagName('script');
+    var tag = document.createElement('script');
+    tag.src = "https://assets.snclouds.com/upsellblast/data.js";
+    var lastScriptTag = scripts[scripts.length - 1];
+    lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
+}
