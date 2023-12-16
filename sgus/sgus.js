@@ -1116,51 +1116,51 @@
         }
     })
 })(jQuery);
-(function($) {
-    if ($.fn.sgstyle) return;
-    var f = function(a) {
-        return a.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
-    };
-    var g = !! CSSStyleDeclaration.prototype.getPropertyValue;
-    if (!g) {
-        CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
-            return this.getAttribute(a)
-        };
-        CSSStyleDeclaration.prototype.setProperty = function(a, b, c) {
-            this.setAttribute(a, b);
-            var c = typeof c != 'undefined' ? c : '';
-            if (c != '') {
-                var d = new RegExp(f(a) + '\\s*:\\s*' + f(b) + '(\\s*;)?', 'gmi');
-                this.cssText = this.cssText.replace(d, a + ': ' + b + ' !' + c + ';')
-            }
-        };
-        CSSStyleDeclaration.prototype.removeProperty = function(a) {
-            return this.removeAttribute(a)
-        };
-        CSSStyleDeclaration.prototype.getPropertyPriority = function(a) {
-            var b = new RegExp(f(a) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi');
-            return b.test(this.cssText) ? 'important' : ''
-        }
-    }
-    $.fn.sgstyle = function(a, b, c) {
-        var d = this.get(0);
-        if (typeof d == 'undefined') {
-            return this
-        }
-        var e = this.get(0).style;
-        if (typeof a != 'undefined') {
-            if (typeof b != 'undefined') {
-                c = typeof c != 'undefined' ? c : '';
-                e.setProperty(a, b, c);
-                return this
-            } else {
-                return e.getPropertyValue(a)
-            }
-        } else {
-            return e
-        }
-    }
-})(jQuery);
+// (function($) {
+//     if ($.fn.sgstyle) return;
+//     var f = function(a) {
+//         return a.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
+//     };
+//     var g = !! CSSStyleDeclaration.prototype.getPropertyValue;
+//     if (!g) {
+//         CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
+//             return this.getAttribute(a)
+//         };
+//         CSSStyleDeclaration.prototype.setProperty = function(a, b, c) {
+//             this.setAttribute(a, b);
+//             var c = typeof c != 'undefined' ? c : '';
+//             if (c != '') {
+//                 var d = new RegExp(f(a) + '\\s*:\\s*' + f(b) + '(\\s*;)?', 'gmi');
+//                 this.cssText = this.cssText.replace(d, a + ': ' + b + ' !' + c + ';')
+//             }
+//         };
+//         CSSStyleDeclaration.prototype.removeProperty = function(a) {
+//             return this.removeAttribute(a)
+//         };
+//         CSSStyleDeclaration.prototype.getPropertyPriority = function(a) {
+//             var b = new RegExp(f(a) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi');
+//             return b.test(this.cssText) ? 'important' : ''
+//         }
+//     }
+//     $.fn.sgstyle = function(a, b, c) {
+//         var d = this.get(0);
+//         if (typeof d == 'undefined') {
+//             return this
+//         }
+//         var e = this.get(0).style;
+//         if (typeof a != 'undefined') {
+//             if (typeof b != 'undefined') {
+//                 c = typeof c != 'undefined' ? c : '';
+//                 e.setProperty(a, b, c);
+//                 return this
+//             } else {
+//                 return e.getPropertyValue(a)
+//             }
+//         } else {
+//             return e
+//         }
+//     }
+// })(jQuery);
 // if (typeof window['sglsc'] === 'undefined') {
 //     var scripts = document.getElementsByTagName('script');
 //     var tag = document.createElement('script');
