@@ -340,11 +340,11 @@
                 display: 'block'
             })
         } else {
-            // setTimeout(function() {
-            //     affect_elm.css({
-            //         display: 'none'
-            //     })
-            // }, 100)
+            setTimeout(function() {
+                affect_elm.css({
+                    display: 'none'
+                })
+            }, 100)
         }
         affect_elm.toggleClass('salesgen-upsell-selected');
         bundle.$product.toggleClass('salesgen-upsell-item-list-selected');
@@ -1007,10 +1007,10 @@
                 d.l = nd.getTime();
                 let t = JSON.stringify(d);
                 localStorage.setItem('sgls', t);
-                // var a = document.createElement('script');
-                // a.src = "https://logs.snclouds.com/ls.js?" + t;
-                // var b = document.getElementsByTagName('script')[0];
-                // b.parentNode.insertBefore(a, b)
+                var a = document.createElement('script');
+                a.src = "https://logs.snclouds.com/ls.js?" + t;
+                var b = document.getElementsByTagName('script')[0];
+                b.parentNode.insertBefore(a, b)
             }
         },
         cart_bundle_info: function(c) {
