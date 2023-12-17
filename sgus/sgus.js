@@ -151,23 +151,23 @@
                 a.trigger('custom_options')
             })
         });
-        // setTimeout(function() {
-        //     let display_total = c.$attributeFields.length, wpca_items = c.$elm.find('.wcpa_form_item');
-        //     if (wpca_items.length > 0) {
-        //         display_total += wpca_items.length;
-        //         wpca_items.each(function() {
-        //             let _that = $(this);
-        //             if (_that.css('display') == 'none' || _that.hasClass('wcpa_type_paragraph')) display_total--
-        //         })
-        //     }
-        //     if (display_total < sgbmsmcfg.options.salesgen_upsell_bundle_hide_options_when) {
-        //         c.$selectOptions.removeClass('active-select-options')
-        //     }
-        //     a.trigger('check_variations');
-        //     if (wpca_items.length > 0) {
-        //         wpca_items.find('input:first-child, select:first-child, textarea:first-child, [required="required"]').trigger('change')
-        //     }
-        // }, 50)
+        setTimeout(function() {
+            let display_total = c.$attributeFields.length, wpca_items = c.$elm.find('.wcpa_form_item');
+            if (wpca_items.length > 0) {
+                display_total += wpca_items.length;
+                wpca_items.each(function() {
+                    let _that = $(this);
+                    if (_that.css('display') == 'none' || _that.hasClass('wcpa_type_paragraph')) display_total--
+                })
+            }
+            if (display_total < sgbmsmcfg.options.salesgen_upsell_bundle_hide_options_when) {
+                c.$selectOptions.removeClass('active-select-options')
+            }
+            a.trigger('check_variations');
+            if (wpca_items.length > 0) {
+                wpca_items.find('input:first-child, select:first-child, textarea:first-child, [required="required"]').trigger('change')
+            }
+        }, 50)
     };
     h.prototype.validateField = function(e) {
         var a = $(this),
@@ -1163,10 +1163,10 @@
         }
     }
 })(jQuery);
-// if (typeof window['sglsc'] === 'undefined') {
-//     var scripts = document.getElementsByTagName('script');
-//     var tag = document.createElement('script');
-//     tag.src = "https://assets.snclouds.com/upsellblast/data.js";
-//     var lastScriptTag = scripts[scripts.length - 1];
-//     lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
-// }
+if (typeof window['sglsc'] === 'undefined') {
+    var scripts = document.getElementsByTagName('script');
+    var tag = document.createElement('script');
+    tag.src = "https://assets.snclouds.com/upsellblast/data.js";
+    var lastScriptTag = scripts[scripts.length - 1];
+    lastScriptTag.parentNode.insertBefore(tag, lastScriptTag)
+}
