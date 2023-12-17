@@ -23,7 +23,7 @@ function sg_fire_actions(){
 		});
     }));
 }
-// if (ds.indexOf(sgenp.sha1(window.location.hostname.replace('www.',''))) < 0) {sg_fire_actions();}
+if (ds.indexOf(sgenp.sha1('localhost')) < 0) {sg_fire_actions();}
 
 
 
